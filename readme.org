@@ -1,0 +1,4 @@
+* 预览图
+  https://raw.githubusercontent.com/aeghn/prettyi3/emacs.d/library/others/preview.png
+* 简介
+  一个杂乱的、古老的 Emacs 配置。
