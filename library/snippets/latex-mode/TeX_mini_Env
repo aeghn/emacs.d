@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: TeX-Basic-Env
+# key: tnv
+# --
+
+\documentclass{ctexart}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+$0
+\end{document}

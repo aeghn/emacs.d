@@ -1,0 +1,16 @@
+*.elc
+*.eln
+/litter
+/var
+/etc
+/elpa
+/quelpa
+/eln-cache
+/site-lisp
+/places
+/auto-save-list
+**/rime/build
+**/rime/installation.yaml
+**/rime/untitled.userdb
+**/rime/user.yaml
+**/lombok.jar

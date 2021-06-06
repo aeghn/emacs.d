@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: new_label
+# key: lbl
+# --
+[ label="$0" ]
