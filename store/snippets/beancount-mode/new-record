@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: new-record
+# key: new
+# --
+`(format-time-string "%Y-%m-%d")` * "$1"

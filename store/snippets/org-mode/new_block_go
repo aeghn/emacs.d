@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: gos
+# key: gos
+# --
+  #+begin_src go
+  package main
+
+  import (
+	  "fmt"
+  )
+
+  func main() {
+
+  }
+
+ #+end_src

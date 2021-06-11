@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: new_java_snippet
+# key: sj
+# --
+#+BEGIN_SRC java
+`(yank)`
+#+END_SRC

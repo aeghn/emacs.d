@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: src_block_java
-# key: srcj
-# --
-#+BEGIN_SRC java
-$1
-#+END_SRC

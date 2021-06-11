@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: org_new_book
+# key: *bk
+# --
+* $0
+  :PROPERTIES: 
+  :AUTHORS:
+  :YEAR: 
+  :EDITION:
+  :PUBLISHER:
+  :TYPE: 
+  :ERRATA_PAGE: 
+  :ADD_DATE: `(format-time-string "%Y-%m-%d %H:%M:%S")`
+  :END:

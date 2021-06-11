@@ -2,10 +2,10 @@
 
 (defvar user-emacs-directory (file-truename "~/.emacs.d/"))
 
-(defvar chin/configuration-files-directory (expand-file-name "setup" user-emacs-directory)
+(defvar chin/configuration-files-directory (expand-file-name "chungs" user-emacs-directory)
   "Personal configuration directory")
 
-(defvar chin/library-files-directory (expand-file-name "library" user-emacs-directory)
+(defvar chin/library-files-directory (expand-file-name "store" user-emacs-directory)
   "Personal library directory")
 
 (defvar chin/temporary-files-directory (expand-file-name "litter" user-emacs-directory)
@@ -33,21 +33,16 @@
 (require 'init-completion)
 (require 'init-latex)
 (require 'init-ivy)
-(require 'init-go)
 (require 'init-org)
 (require 'init-window)
 (require 'init-blog)
 (require 'init-edit)
-(require 'init-reader)
-(require 'init-network)
 (require 'init-ui)
 (require 'init-cc)
 (require 'init-dired)
 (require 'init-term)
 (require 'jinp)
 (require 'init-life)
-(require 'init-java)
-(require 'init-work)
 (require 'init-interface)
 
 (load-file "~/.emacs.d/site-lisp/cangjie.el")

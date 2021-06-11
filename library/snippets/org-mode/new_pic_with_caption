@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: org_new_pic_with_caption
-# key: npc
-# --
-
-#+CAPTION: $0
-`(org-docs-insert-image-from-clipboard)`
