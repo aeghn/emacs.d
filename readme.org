@@ -1,4 +1,4 @@
 * 预览图
-  [[https://raw.githubusercontent.com/aeghn/emacs.d/master/library/others/preview.png]]
+  [[https://github.com/aeghn/emacs.d/raw/master/store/others/preview.png]]
 * 简介
-  一个杂乱的、古老的 Emacs 配置。
+  一个杂乱的、简单的 Emacs 配置。
