@@ -20,11 +20,11 @@ directory too."
              (split-len (length split))
              shrunk)
         (->> split
-             (--map-indexed (if (= it-index (1- split-len))
-                                it
-                              (substring it 0 (if (s-starts-with? "." it) 2 1))))
-             (s-join "/")
-             (setq shrunk))
+          (--map-indexed (if (= it-index (1- split-len))
+                             it
+                           (substring it 0 (if (s-starts-with? "." it) 2 1))))
+          (s-join "/")
+          (setq shrunk))
         (s-concat (unless (s-matches? (rx bos (or "~" "/")) shrunk) "/")
                   shrunk
                   (unless (s-ends-with? "/" shrunk) "/"))) full-path))
@@ -51,19 +51,22 @@ directory too."
 
 (setq-default mode-line-format
               '("   "
-                (:eval (propertize (if (buffer-file-name) (chin/shrink-path default-directory 15) "") 'face '(:foreground "#500000" :slant italic)))
-                (:eval (propertize "%b" 'face '(:foreground "#005000" :weight bold)))
+                (:eval (propertize (if (buffer-file-name) (chin/shrink-path default-directory 15) "") 'face '(:foreground "#888888")))
+                (:eval (propertize "%b" 'face '(:weight bold)))
                 "      "
                 (:eval (buffer-status))
                 "      "
                 minions-mode-line-modes
-                (:eval (propertize (return-string-space vc-mode) 'face '(:slant italic :foreground "#000050"))) 
+                (:eval (propertize (return-string-space vc-mode) 'face '(:foreground "#808080")))
                 (:eval (return-string-space (flycheck-mode-line-status-text)))
                 "      "
-                (:eval (propertize "%l:%C %P" 'face '(:foreground "#500050")))))
+                (:eval (propertize "%l:%C " 'face '(:weight bold)))
+                (:eval (propertize "%P " 'face '(:foreground "#808080")))))
 
+
+(global-display-line-numbers-mode 1) 
 
 ;;; Header
-(setq-default frame-title-format '("%b — Emacs" ))
+(setq-default frame-title-format '("%b — GNU Emacs" ))
 
 (provide 'init-interface)

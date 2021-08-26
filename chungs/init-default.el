@@ -40,12 +40,12 @@ vi style of % jumping to matching brace."
 ;; recentf
 (use-package recentf
   :ensure nil
+  :after no-littering
   ;; :bind (("C-x C-r" . recentf-open-files))
   :hook (after-init . recentf-mode)
-  :init
+  :custom
   (setq recentf-max-saved-items 5000)
-  :config
-  (recentf-track-opened-file))
+  (recentf-auto-cleanup 'never))
 
 (use-package helpful
   :commands helpful--buffer

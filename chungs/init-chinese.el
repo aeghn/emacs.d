@@ -63,7 +63,7 @@
   (rime-emacs-module-header-root "~/.local/include")
 
   :config
-  (setq rime-user-data-dir "~/.emacs.d/library/rime")
+  (setq rime-user-data-dir "~/.emacs.d/store/rime")
 
   (setq rime-translate-keybindings
         '("C-f" "C-b" "C-n" "C-p" "C-g"))

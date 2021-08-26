@@ -21,7 +21,7 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/site-lisp"))
 (add-to-list 'custom-theme-load-path (expand-file-name "themes" chin/library-files-directory))
 
-(setq gc-cons-threshold (* 100 1024 1024))
+;; (setq gc-cons-threshold (* 100 1024 1024))
 
 (setq visible-bell nil)
 (setq ring-bell-function 'ignore)
@@ -44,5 +44,6 @@
 (require 'jinp)
 (require 'init-life)
 (require 'init-interface)
+(require 'init-chinbox)
 
 (load-file "~/.emacs.d/site-lisp/cangjie.el")

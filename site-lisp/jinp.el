@@ -1,5 +1,5 @@
 ;;; -*- lexical-binding: t; -*-
-;; 
+;;
 ;; Credits:
 ;; https://stackoverflow.com/questions/683425/globally-override-key-binding-in-emacs
 ;; https://emacs.stackexchange.com/questions/22200/how-to-add-a-prefix-key-to-all-keybindings-of-a-specific-mode
@@ -12,16 +12,28 @@
 (defun jinp-buffer-previous ()
   "Goto previous buffer"
   (interactive)
-  (previous-buffer)
-  (while (string-match "^\*.*" (buffer-name))
-    (next-buffer)))
+  (let ((this-buffer-name (buffer-name)))
+    (previous-buffer)
+    (catch 'res
+      (while (string-match "^\*.*" (buffer-name))
+        (previous-buffer)
+        (when (string-equal this-buffer-name (buffer-name))
+          (previous-buffer)
+          (throw 'res nil))))))
 
 (defun jinp-buffer-next ()
-  "Goto next buffer"
+  "Goto previous buffer"
   (interactive)
-  (next-buffer)
-  (while (string-match "^\*.*" (buffer-name))
-    (next-buffer)))
+  (let ((this-buffer-name (buffer-name)))
+    (next-buffer)
+    (catch 'res
+      (while (string-match "^\*.*" (buffer-name))
+        (next-buffer)
+        (message (buffer-name))
+        (when (string-equal this-buffer-name (buffer-name))
+          (next-buffer)
+          (throw 'res nil))))))
+
 
 (defun jinp-buffer-manager ()
   "Manager buffers"

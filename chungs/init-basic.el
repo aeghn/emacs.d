@@ -2,15 +2,15 @@
 (defun chin/set-font ()
   (set-face-attribute
    'default nil
-   :font "Roboto Mono-10")
+   :font "Roboto Mono-11")
 
   (set-face-attribute
    'mode-line nil
-   :font "Roboto-11")
+   :font "Roboto-12")
 
   (set-face-attribute
    'mode-line-inactive nil
-   :font "Roboto-11")
+   :font "Roboto-12")
 
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font
@@ -23,9 +23,9 @@
   (set-frame-parameter (selected-frame)
                        'internal-border-width 10)
 
-  (setq-default left-margin-width 2 right-margin-width 2)
-  (set-window-margins nil 2 2)
-  
+  (setq-default left-margin-width 0 right-margin-width 2)
+  (set-window-margins nil 0 0)
+
   (setq face-font-rescale-alist '(("STHeiti" . 1.0))))
 
 (add-hook 'after-make-frame-functions
