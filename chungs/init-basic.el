@@ -34,7 +34,7 @@
             (if (display-graphic-p)
                 (chin/set-font))))
 
-(setq-default overline-margin 2
+(setq-default overline-margin 0
               ;; This fix the cursor movement lag
               auto-window-vscroll nil
               underline-minimum-offset 10)

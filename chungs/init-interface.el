@@ -51,17 +51,17 @@ directory too."
 
 (setq-default mode-line-format
               '("   "
-                (:eval (propertize (if (buffer-file-name) (chin/shrink-path default-directory 15) "") 'face '(:foreground "#888888")))
+                (:eval (propertize (if (buffer-file-name) (chin/shrink-path default-directory 15) "")))
                 (:eval (propertize "%b" 'face '(:weight bold)))
                 "      "
                 (:eval (buffer-status))
                 "      "
                 minions-mode-line-modes
-                (:eval (propertize (return-string-space vc-mode) 'face '(:foreground "#808080")))
+                (:eval (propertize (return-string-space vc-mode) 'face '()))
                 (:eval (return-string-space (flycheck-mode-line-status-text)))
                 "      "
                 (:eval (propertize "%l:%C " 'face '(:weight bold)))
-                (:eval (propertize "%P " 'face '(:foreground "#808080")))))
+                (:eval (propertize "%P "))))
 
 
 (global-display-line-numbers-mode 1) 

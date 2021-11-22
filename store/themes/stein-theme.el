@@ -345,7 +345,7 @@
    `(mini-modeline-mode-line-inactive ((t (:background ,stein-comment :box nil))))
    ;; mode-line
    `(mode-line ((t (:foreground nil :background nil :overline ,bg0))))
-   `(mode-line-inactive ((t (:foreground ,fg0 :overline ,bg2))))
+   `(mode-line-inactive ((t (:foreground ,stein-accent :overline ,bg2))))
    `(mode-line-buffer-id ((t (:foreground ,stein-blue :weight bold))))
    `(mode-line-position-face ((t (:foreground ,stein-purple))))
    ;; mu4e

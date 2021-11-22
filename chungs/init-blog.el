@@ -1,7 +1,7 @@
 (use-package org-static-blog
   :load-path "~/Repos/org-static-blog/"
   :init
-  (setq org-static-blog-publish-title "Aeghn"
+  (setq org-static-blog-publish-title "wangz.me"
         org-static-blog-publish-url "https://wangz.me/"
         org-static-blog-publish-directory "~/Repos/blog/"
         org-static-blog-posts-directory "~/Repos/blog/posts/"
@@ -10,6 +10,9 @@
         org-export-with-toc t
         org-export-with-section-numbers t
         org-static-blog-use-preview t)
+
+  (setq org-static-blog-index-file "archive.html")
+  
   (setq org-static-blog-page-header
         "<meta name=\"author\" content=\"Aeghn\">
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
@@ -20,7 +23,7 @@
   ;;   This particular HTML creates a <div> with a simple linked headline
   (setq org-static-blog-page-preamble
         "<div id=\"blog-nav\">
-  <a href=\"/\">WANGZ's blog </a>
+  <a href=\"/\">wangz's blog </a>
   <span>/ </span>
   <a href=\"/tags.html\">Tags </a>
 </div><hr/>")

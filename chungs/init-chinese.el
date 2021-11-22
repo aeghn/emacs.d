@@ -69,7 +69,7 @@
         '("C-f" "C-b" "C-n" "C-p" "C-g"))
 
   (setq default-input-method "rime"
-        rime-show-candidate 'posframe
+        ;; rime-show-candidate 'posframe
         rime-posframe-style 'simple
         rime-show-preedit t)
 
