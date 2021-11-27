@@ -20,11 +20,11 @@ directory too."
              (split-len (length split))
              shrunk)
         (->> split
-          (--map-indexed (if (= it-index (1- split-len))
-                             it
-                           (substring it 0 (if (s-starts-with? "." it) 2 1))))
-          (s-join "/")
-          (setq shrunk))
+             (--map-indexed (if (= it-index (1- split-len))
+                                it
+                              (substring it 0 (if (s-starts-with? "." it) 2 1))))
+             (s-join "/")
+             (setq shrunk))
         (s-concat (unless (s-matches? (rx bos (or "~" "/")) shrunk) "/")
                   shrunk
                   (unless (s-ends-with? "/" shrunk) "/"))) full-path))
@@ -64,7 +64,7 @@ directory too."
                 (:eval (propertize "%P " 'face '(:foreground "#808080")))))
 
 
-(global-display-line-numbers-mode 1) 
+(global-display-line-numbers-mode 1)
 
 ;;; Header
 (setq-default frame-title-format '("%b — GNU Emacs" ))

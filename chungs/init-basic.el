@@ -2,15 +2,15 @@
 (defun chin/set-font ()
   (set-face-attribute
    'default nil
-   :font "Roboto Mono-11")
+   :font "DM Mono-9")
 
   (set-face-attribute
    'mode-line nil
-   :font "Roboto-12")
+   :font "Roboto-10")
 
   (set-face-attribute
    'mode-line-inactive nil
-   :font "Roboto-12")
+   :font "Roboto-10")
 
   (dolist (charset '(kana han symbol cjk-misc bopomofo))
     (set-fontset-font
@@ -138,11 +138,6 @@
       (let ((command (ivy-read "Select external app: " (directory-files "/bin"))))
         (call-process-shell-command  (concat command " '" file-name "' &!") nil 0)
         (message ">>> Opened `%s' by %s." file-name command)))))
-
-(defun chin/open-scratch ()
-  (interactive)
-
-  )
 
 ;; Reference: view-echo-area-messages
 (global-set-key (kbd "M-m n")

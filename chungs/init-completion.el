@@ -17,7 +17,7 @@
 ;; The completion engine
 (use-package company
   :ensure t
-  :hook (prog-mode . company-mode)
+  ;; :hook (prog-mode . company-mode)
   :bind (:map company-mode-map
               ([remap completion-at-point] . company-complete)
               :map company-active-map
@@ -52,17 +52,17 @@
                       (company-dabbrev-code company-etags company-keywords)
                       company-dabbrev)))
 
-(use-package lsp-pyright
-  :ensure t
-  :hook (python-mode . (lambda ()
-                          (require 'lsp-pyright)
-                          (lsp))))  ; or lsp-deferred
+;; (use-package lsp-pyright
+  ;; :ensure t
+  ;; :hook (python-mode . (lambda ()
+                          ;; (require 'lsp-pyright)
+                          ;; (lsp))))  ; or lsp-deferred
 
 ;; lsp-mode
 (use-package lsp-mode
   :ensure t
-  :hook ((lsp-mode . lsp-enable-which-key-integration)
-         (prog-mode . lsp-deferred))
+  ;; :hook ((lsp-mode . lsp-enable-which-key-integration)
+  ;;        (prog-mode . lsp-deferred))
   :bind (:map lsp-mode-map
               ("C-c f" . lsp-format-region)
               ("C-c d" . lsp-describe-thing-at-point)
